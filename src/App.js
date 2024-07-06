@@ -8,6 +8,7 @@ import NavigationBar from './components/Navbar';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 
+
 function App() {
   return (
     <div className="App">

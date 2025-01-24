@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import LoginPage from './Pages/LoginPage';
@@ -15,7 +16,7 @@ function App() {
       <Router>
         <AuthProvider>
           <NavigationBar />
-          <div className="container-fluid mt-4">
+          <div>
             <Routes>
               <Route path="/" element={<PrivateRoute><UserList /></PrivateRoute> } />
               <Route path="/user/:userId" element={<PrivateRoute><UserForm /></PrivateRoute> } />

@@ -1,6 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const UserTable = ({ users }) => {
   return (
@@ -8,6 +10,7 @@ const UserTable = ({ users }) => {
           <table className="table table-sm table-striped text-center table-bordered">
               <thead>
                   <tr>
+                      <th>Number # </th>
                       <th>Picture</th>
                       <th>Name</th>
                       <th>Email</th>
@@ -15,8 +18,9 @@ const UserTable = ({ users }) => {
                   </tr>
               </thead>
               <tbody>
-                  {users.map((user) => (
+                  {users.map((user, index) => (
                       <tr key={user.login.uuid}>
+                          <td>{index + 1}</td>
                           <td>
                               <img className='rounded' src={user.picture.thumbnail} alt="User" />
                           </td>
@@ -24,15 +28,17 @@ const UserTable = ({ users }) => {
                           <td>{user.email}</td>
                           <td>
                               <Link to={`/User/${user.login.uuid}`} className="btn btn-primary">
-                                  Edit
+                                  Edit <FontAwesomeIcon icon={faEdit} /> 
                               </Link>
+                              <button className='btn btn-danger m-1'>
+                                      Delete <FontAwesomeIcon icon={faTrash} />  
+                              </button>
                           </td>
                       </tr>
                   ))}
               </tbody>
           </table>
       </div>
-   
   );
 };
 

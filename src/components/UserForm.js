@@ -4,15 +4,24 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useForm } from 'react-hook-form'; // Import the useForm hook from react-hook-form
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+// below Icons are imported from @fontawesome/free-solid-svg-icons as an object then provided to the Icon
+// as prop as an object on line 52 and 58.
+import { faSave, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import  Loader  from '../components/Loader';
 
 
 const UserForm = () => {
-  const { userId } = useParams();//This hook is used to access the URL parameters.
+  const { userId } = useParams();//This hook is used to access the URL parameters .ex QueryString -> ?UserId={value}.
   const [user, setUser] = useState(null); //setting User variable to Null e.g. User = null
   // Initialize the useForm hook and destructure its methods and form state
-  const { register, handleSubmit, watch,  reset } = useForm();
+  const { register, handleSubmit, watch,  reset, getValues } = useForm();
+  // register: This method is used to register an input or select element and apply the appropriate validation rules.
+  // handleSubmit: This method will be called when the form is submitted.
+  // watch: This method is used to subscribe to input changes and get the current value of an input.
+  // getValues: This method is used to get the current values of the form fields.
+  
   //Version 6, Removed the hook UseHistory, and added UseNavigate Hook for programmatic Nagivation.
+  //useNavigate is a hook that returns a function that lets you navigate programmatically, similar to the history.push method in React Router v5.
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +40,9 @@ const UserForm = () => {
   };
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div className='d-flex justify-content-center align-items-center'>
+      <Loader />
+    </div>;
   }
 
   console.log(watch("email")); // watch input value by passing the name of it
@@ -40,21 +51,26 @@ const UserForm = () => {
     navigate('/');// New Function For Navigation, or older was history.push('/')
   }
 
-  const handleSave = (data) => {
+  const handleSave = () => {
+    const data = getValues();
+    // getValues() is a method provided by the useForm hook that allows you to retrieve the current values of the form fields.
     console.log(data);
   }
 
   return (
     <div>
       <button onClick={goHome} className="btn btn-light my-2">
-        Back
+        <FontAwesomeIcon icon={faArrowLeft} />  Back
       </button>
       <div className=' cotainer-fluid alert alert-success'>
         <div className='d-flex justify-content-between'>
           <h2>Edit User</h2>
-          <button type="submit" className="btn btn-light" onClick={3}>
-            <FontAwesomeIcon icon={faSave} /> save
+          <button type="submit" className="btn btn-light" onClick={handleSave}>
+             Save <FontAwesomeIcon icon={faSave} />
           </button>
+        </div>
+        <div>
+          
         </div>
         <div className='d-flex align-items-center flex-wrap'>
           <div className="col-3 p-1">
@@ -114,6 +130,7 @@ const UserForm = () => {
             <input type="text" className="form-control" id="nat" {...register('nat')} />
           </div>
         </div>
+      
       </div>
     </div>
   );

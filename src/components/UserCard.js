@@ -6,7 +6,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const UserCard = ({ user }) => {
   return (
-    <div className="card h-100">
+    <div className="card h-100 shadow">
       <img src={user.picture.large} className="card-img-top" alt="User" />
       <div className="card-body">
         <h5 className="card-title">{`${user.name.first} ${user.name.last}`}</h5>

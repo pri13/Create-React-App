@@ -9,9 +9,9 @@ const Pagination = ({ totalPages, paginate, currentPage }) => {
 
   return (
     <nav>
-      <ul className="pagination justify-content-center flex-wrap">
+      <ul className="pagination pagination-sm justify-content-center flex-wrap">
         {pageNumbers.map(number => (
-          <li key={number} className={`page-item ${currentPage === number ? 'active' : ''}`}>
+          <li key={number} className={`page-item ${currentPage === number ? 'active' : ''}`} >
             <button onClick={() => paginate(number)} className="page-link">
               {number}
             </button>

@@ -38,7 +38,7 @@
 4. **View Profile**: - Detailed profile information is displayed in the **View Profile** component. ---
 
 
-DEMO
+### DEMO
 
 ![image](https://github.com/user-attachments/assets/8ab9b3c6-7df7-4414-8db5-b0bcd3a5dbc1)
 

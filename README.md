@@ -32,7 +32,9 @@
 4. Configure Firebase: - Create a Firebase project [here](https://firebase.google.com/). - Add a web app and copy your Firebase configuration keys. - Replace the Firebase configuration object in the project (`firebase.js` file). 
 5. Start the development server: ```bash npm start ```
 
-## Usage ### Authentication Workflow
+### Authentication Workflow
+
+ - Usage
 
 - **Sign Up**: Users can register through the Sign-Up page. New user credentials are securely stored in Firebase.
 - **Log In**: Existing users log in through the Login page and are directed to the CRUD page upon successful authentication.

@@ -6,11 +6,10 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used) 
 - [Installation](#installation) 
-- [Usage](#usage)
-- [Authentication Workflow](#authentication-workflow)
+- [Authentication Workflow and Usage](#authentication-workflow)
 - [CRUD Operations](#crud-operations)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots) 
+- [Demo](#Demo) 
 - [Future Enhancements](#future-enhancements) 
 
  ## Introduction

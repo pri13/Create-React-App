@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTable, faTh, faFilter } from '@fortawesome/free-solid-svg-icons';
 import  Loader  from '../components/Loader';
 
+// Home Page
 const UserList = () => {
   // Initializing State Variables and Assinging default values with UseState.
   const [users, setUsers] = useState([]);
@@ -24,7 +25,8 @@ const UserList = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://randomuser.me/api/?results=50'); // Fetching 50 users for demonstration
+      const response = await axios.get('https://randomuser.me/api/?results=50'); 
+      // // Fetching 50 users for demonstration
       setUsers(response.data.results);
       setFilteredUsers(response.data.results);
       setLoading(false);
@@ -62,7 +64,8 @@ const UserList = () => {
   return (
     <div>
       <div className='container my-3'>
-        <div className='alert alert-success d-flex justify-content-between align-items-center mb-3'>
+        {/* Filter Section */}
+        <div className='alert alert-success d-flex justify-content-between align-items-center mb-3 shadow'>
           <div className="d-flex align-items-center flex-grow-1">
             <input
               type="text"
@@ -71,13 +74,13 @@ const UserList = () => {
               value={filter}
               onChange={handleFilterChange}
             />
-            <button className="btn btn-light ms-2 filter-button" onClick={filterUsers}>
+            <button className="btn btn-light ms-2 filter-button shadow" onClick={filterUsers}>
               <FontAwesomeIcon icon={faFilter} style={{ fontSize: '1rem' }} /> Filter
             </button>
           </div>
         </div>
       </div>
-      <div className='d-flex justify-content-end'>
+      <div className='d-flex justify-content-center'>
         <button className="btn btn-sm btn-light my-4" onClick={toggleViewMode}>
           {viewMode === 'card' ? (
             <span><FontAwesomeIcon icon={faTable} /> Table view</span>
@@ -85,21 +88,25 @@ const UserList = () => {
             <span><FontAwesomeIcon icon={faTh} /> Card view</span>
           )}
         </button>
+        <button className='btn btn-sm btn-light my-4 mx-2'>Export Profiles </button>
       </div>
       {loading ? (
         <div className="text-center my-5">
           <Loader />
         </div>
+        //Ternatry Operator
+        // If viewMode is card then show UserCard component + Pagination component
+        // Else show UserTable component + Pagination component  in line 111
       ) : viewMode === 'card' ? (
         <>
           <Pagination totalPages={totalPages} paginate={paginate} currentPage={currentPage} />
           <div className="row row-cols-1 row-cols-md-4 g-4 mx-2">
-            {currentUsers.map((user) => (
+            {currentUsers.map((user, index) => (
               // g-4 is a Bootstrap class for gutter spacing between grid items
               // mx-2 is a Bootstrap class for horizontal margin X-axis
               // my-2 is a Bootstrap class for vertical margin Y-axis
               <div key={user.login.uuid} className="col">
-                <UserCard user={user} />
+                <UserCard user={user} index={index +1} />
               </div>
             ))}
           </div>

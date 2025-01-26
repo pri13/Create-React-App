@@ -48,7 +48,7 @@ const UserForm = () => {
   console.log(watch("email")); // watch input value by passing the name of it
 
   const goHome= ()=> {
-    navigate('/');// New Function For Navigation, or older was history.push('/')
+    navigate('/');
   }
 
   const handleSave = () => {

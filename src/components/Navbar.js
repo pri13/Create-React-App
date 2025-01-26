@@ -26,7 +26,13 @@ const NavigationBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/">Home</Link>
+              <Link className="nav-link text-white btn btn-sm btn-success" to="/">CRUD</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white btn btn-sm btn-success" to="/dataLoader">Data Loader</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white btn btn-sm btn-success" to="/emailSender">Email Sender</Link>
             </li>
           </ul>
           <ul className="navbar-nav">

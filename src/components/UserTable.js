@@ -27,11 +27,14 @@ const UserTable = ({ users }) => {
                           <td>{`${user.name.first} ${user.name.last}`}</td>
                           <td>{user.email}</td>
                           <td>
+                              <Link to="/view" state={user} className="btn btn-success m-1">
+                                  View
+                              </Link>
                               <Link to={`/User/${user.login.uuid}`} className="btn btn-primary">
-                                  Edit <FontAwesomeIcon icon={faEdit} /> 
+                                  Edit <FontAwesomeIcon icon={faEdit} />
                               </Link>
                               <button className='btn btn-danger m-1'>
-                                      Delete <FontAwesomeIcon icon={faTrash} />  
+                                  Delete <FontAwesomeIcon icon={faTrash} />
                               </button>
                           </td>
                       </tr>

@@ -41,6 +41,13 @@
 
 ### DEMO
 
+-Firebase Authentication 
+![image](https://github.com/user-attachments/assets/32944b53-84ff-4da1-aa65-cededf0d2679)
+
+-Registered Users. 
+![image](https://github.com/user-attachments/assets/acef8a39-cef5-482f-ab58-4a871723da0d)
+
+
 ![image](https://github.com/user-attachments/assets/8ab9b3c6-7df7-4414-8db5-b0bcd3a5dbc1)
 
 ![image](https://github.com/user-attachments/assets/32aa204a-c7c5-4778-b242-bb7858911995)

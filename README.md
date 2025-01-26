@@ -22,7 +22,8 @@
 2. **CRUD Functionality**:
    - Retrieve and display random users from the Random User API.
      -  Toggle between **Card View** and **Table View** for displaying users.
-     - Edit and update user details. - Delete users.
+     - Edit and update user details.
+     -  Delete users.
 3. **User Profile View**:
     - A separate component to view detailed user profiles.
 

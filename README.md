@@ -21,9 +21,11 @@
 3. **User Profile View**: - A separate component to view detailed user profiles.
 
  ## Technologies Used 
- **Frontend**: React.js, React Router, CSS -
- **Backend**: Firebase Authentication and Database - 
- **API**: Random User API 
+ - **Frontend**: React.js, React Router, CSS 
+ - **Backend**: Firebase Authentication and Database
+ - **API**: Random User API 
+
+ 
  ## Installation
  
 1. Clone the repository: ```bash git clone https://github.com/your-username/your-repo-name.git ```

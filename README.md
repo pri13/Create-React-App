@@ -34,8 +34,6 @@
 
 ### Authentication Workflow
 
- - Usage
-
 - **Sign Up**: Users can register through the Sign-Up page. New user credentials are securely stored in Firebase.
 - **Log In**: Existing users log in through the Login page and are directed to the CRUD page upon successful authentication.
 

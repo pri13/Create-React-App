@@ -16,9 +16,15 @@
  ## Introduction
  - This React application demonstrates CRUD operations on fake users retrieved from the Random User API. The app is integrated with Firebase for authentication, allowing users to sign up, log in, and securely access the CRUD functionality.
  ## Features
-1. **Authentication**: - Firebase-powered login and sign-up functionality. - Authentication validation for existing users.
-2. **CRUD Functionality**: - Retrieve and display random users from the Random User API. - Toggle between **Card View** and **Table View** for displaying users. - Edit and update user details. - Delete users.
-3. **User Profile View**: - A separate component to view detailed user profiles.
+1. **Authentication**:
+    - Firebase-powered login and sign-up functionality.
+    - Authentication validation for existing users.
+2. **CRUD Functionality**:
+   - Retrieve and display random users from the Random User API.
+     -  Toggle between **Card View** and **Table View** for displaying users.
+     - Edit and update user details. - Delete users.
+3. **User Profile View**:
+    - A separate component to view detailed user profiles.
 
  ## Technologies Used 
  - **Frontend**: React.js, React Router, CSS 

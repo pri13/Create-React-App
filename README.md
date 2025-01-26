@@ -18,7 +18,9 @@
  ## Features
 1. **Authentication**: - Firebase-powered login and sign-up functionality. - Authentication validation for existing users.
 2. **CRUD Functionality**: - Retrieve and display random users from the Random User API. - Toggle between **Card View** and **Table View** for displaying users. - Edit and update user details. - Delete users.
-3. **User Profile View**: - A separate component to view detailed user profiles. --- ## Technologies Used 
+3. **User Profile View**: - A separate component to view detailed user profiles.
+
+ ## Technologies Used 
  **Frontend**: React.js, React Router, CSS -
  **Backend**: Firebase Authentication and Database - 
  **API**: Random User API 
@@ -28,10 +30,15 @@
 2. Navigate to the project directory: ```bash cd your-repo-name ``` 
 3. Install dependencies: ```bash npm install ``` 
 4. Configure Firebase: - Create a Firebase project [here](https://firebase.google.com/). - Add a web app and copy your Firebase configuration keys. - Replace the Firebase configuration object in the project (`firebase.js` file). 
-5. Start the development server: ```bash npm start ``` --- ## Usage ### Authentication Workflow
+5. Start the development server: ```bash npm start ```
+
+## Usage ### Authentication Workflow
+
 - **Sign Up**: Users can register through the Sign-Up page. New user credentials are securely stored in Firebase.
 - **Log In**: Existing users log in through the Login page and are directed to the CRUD page upon successful authentication.
- ### CRUD Operations 
+
+  
+### CRUD Operations 
 1. **Read**: - Random users are fetched from the Random User API. 
  - Displayed as a list in both **Card View** and **Table View** (users can toggle between views).
 2. **Update**: - Users can edit the details of a selected user through an **Edit User** form.

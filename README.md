@@ -20,9 +20,9 @@
     - Authentication validation for existing users.
 2. **CRUD Functionality**:
    - Retrieve and display random users from the Random User API.
-     -  Toggle between **Card View** and **Table View** for displaying users.
+     - Toggle between **Card View** and **Table View** for displaying users.
      - Edit and update user details.
-     -  Delete users.
+     - Delete users.
 3. **User Profile View**:
     - A separate component to view detailed user profiles.
 
@@ -34,10 +34,13 @@
  
  ## Installation
  
-1. Clone the repository: ```bash git clone https://github.com/your-username/your-repo-name.git ```
-2. Navigate to the project directory: ```bash cd your-repo-name ``` 
+1. Clone the repository: ```bash git clone https://github.com/pri13/Create-React-App.git ```
+2. Navigate to the project directory: ```bash cd Create-React-App ``` 
 3. Install dependencies: ```bash npm install ``` 
-4. Configure Firebase: - Create a Firebase project [here](https://firebase.google.com/). - Add a web app and copy your Firebase configuration keys. - Replace the Firebase configuration object in the project (`firebase.js` file). 
+4. Configure Firebase: 
+            - Create a Firebase project [here](https://firebase.google.com/).
+            - Add a web app and copy your Firebase configuration keys.
+            - Replace the Firebase configuration object in the project (`firebase.js` file). 
 5. Start the development server: ```bash npm start ```
 
 ### Authentication Workflow

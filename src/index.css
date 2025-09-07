@@ -12,3 +12,15 @@ code {
     monospace;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  background-color: #efe7d469 !important;
+}
+
+.custom-bg {
+  background-color: #049DD9 !important;
+  color: white !important;
+}
+
+.card-header {
+  background-color: #efe7d469 !important;
+}
